@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+
+        android:id="@+id/instructions"
+
+        android:layout_width="344dp"
+
+        android:layout_height="30dp"
+
+        android:layout_marginTop="180dp"
+
+        android:text="@string/instructions"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="#494949"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+
+        android:id="@+id/edid"
+
+        android:layout_width="292dp"
+
+        android:layout_height="38dp"
+
+        android:layout_marginTop="8dp"
+
+        android:autofillHints=""
+
+        android:hint="@string/input_hint"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.302"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructions" />
+
+    <Button
+
+        android:id="@+id/btnBusca"
+
+        android:layout_width="64dp"
+
+        android:layout_height="35dp"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:background="@drawable/button_search2"
+        android:backgroundTint="@color/blue"
+        android:drawableBottom="@drawable/button_search"
+        android:onClick="buscarPlayer"
+        app:icon="@android:drawable/ic_menu_search"
+        app:iconSize="30dp"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructions" />
+
+    <TextView
+
+        android:id="@+id/txtname"
+
+        android:layout_width="252dp"
+
+        android:layout_height="39dp"
+
+        android:layout_marginTop="60dp"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.786"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBusca" />
+
+    <TextView
+
+        android:id="@+id/txtposi"
+
+        android:layout_width="252dp"
+
+        android:layout_height="39dp"
+
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.791"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtname" />
+
+    <TextView
+
+        android:id="@+id/txtheight"
+
+        android:layout_width="252dp"
+
+        android:layout_height="39dp"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.786"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtposi" />
+
+    <TextView
+
+        android:id="@+id/txtweight"
+
+        android:layout_width="252dp"
+
+        android:layout_height="39dp"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.786"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtheight" />
+
+    <Button
+        android:id="@+id/btnsave"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/button_search"
+
+        android:onClick="salvarDados"
+        android:text="@string/button_save"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtweight" />
+
+    <Button
+        android:id="@+id/btnlist"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/button_search"
+        android:onClick="consultarDados"
+        android:text="@string/button_consult"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtweight" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="121dp"
+        android:layout_height="141dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginRight="140dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/instructions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/nba_logo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

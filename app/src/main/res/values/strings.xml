@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">LoadAssincrono</string>
+    <string name="instructions">Digite o ID do jogador </string>
+
+    <string name="button_text">Pesquisar</string>
+    <string name="button_save">Salvar</string>
+    <string name="button_consult">Consultar</string>
+
+
+    <string name="input_hint">ID jogador...</string>
+
+    <string name="loading">Buscando...</string>
+
+    <string name="no_results">"Nenhum resultado encontrado"</string>
+
+    <string name="no_search_term">Informe um ID válido</string>
+
+    <string name="no_network">Sem conexão:(</string>
+    <string name="str_empty">" "</string>
+</resources>
