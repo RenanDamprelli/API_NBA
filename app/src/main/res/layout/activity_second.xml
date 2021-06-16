@@ -5,7 +5,7 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".SecondActivity">
 
     <ProgressBar
         android:id="@+id/progressBar2"
@@ -23,8 +23,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
 
@@ -36,7 +35,7 @@
 
         android:layout_marginTop="180dp"
 
-        android:text="@string/instructions"
+        android:text="@string/instructions2"
 
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:textColor="@color/purple_500"
@@ -55,9 +54,9 @@
         android:background="@drawable/edit"
         android:ems="10"
         android:inputType="text"
+        android:paddingLeft="10dp"
         android:shadowColor="#C3C3C3"
         android:text=""
-        android:paddingLeft="10dp"
         android:textColor="@color/purple_500"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/instructions" />
@@ -91,8 +90,8 @@
         android:layout_height="39dp"
 
         android:layout_marginTop="60dp"
-        android:textColor="@color/purple_500"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="@color/purple_500"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.553"
@@ -106,8 +105,8 @@
         android:layout_width="252dp"
 
         android:layout_height="39dp"
-        android:textColor="@color/purple_500"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="@color/purple_500"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.553"
@@ -121,8 +120,8 @@
         android:layout_width="252dp"
 
         android:layout_height="39dp"
-        android:textColor="@color/purple_500"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="@color/purple_500"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.553"
@@ -136,48 +135,15 @@
         android:layout_width="252dp"
 
         android:layout_height="39dp"
-        android:textColor="@color/purple_500"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="@color/purple_500"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.556"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtname" />
-
-    <Button
-        android:id="@+id/btnsave"
-        android:layout_width="140dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/button_search"
-
-        android:onClick="salvarDados"
-        android:text="@string/button_save"
-        app:backgroundTint="#112F53"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtweight" />
-
-    <Button
-        android:id="@+id/btnlist"
-        android:layout_width="140dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/button_search"
-        android:onClick="consultarDados"
-        android:text="@string/button_consult"
-        app:backgroundTint="#112F53"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtweight" />
 
     <ImageView
         android:id="@+id/imageView"

@@ -13,7 +13,7 @@
         <gradient
             android:centerColor="#00fd1d1d"
             android:centerY="0.5"
-            android:endColor="#FF5100"
+            android:endColor="@color/red"
             android:startColor="#00fd1d1d"
             android:type="sweep"
             android:useLevel="false" />

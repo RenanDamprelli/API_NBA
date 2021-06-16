@@ -7,12 +7,13 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SplashScreen extends AppCompatActivity {
+public class Menu extends AppCompatActivity {
 
     private SensorManager sensorManager;
     private Sensor lightSensor;
@@ -20,13 +21,22 @@ public class SplashScreen extends AppCompatActivity {
     private View root;
     private float maxValue;
 
+    private TextView menu;
+    private Button btn_player;
+    private Button btn_team;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
+        setContentView(R.layout.activity_menu);
         root = findViewById(R.id.root);
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
+
+        menu = findViewById(R.id.txt_menu);
+        btn_player = findViewById(R.id.btn_player);
+        btn_team = findViewById(R.id.btn_team);
+
 
         // max value for light sensor
         maxValue = lightSensor.getMaximumRange();
@@ -38,6 +48,14 @@ public class SplashScreen extends AppCompatActivity {
                 // between 0 and 255
                 int newValue = (int) (255f * value / maxValue);
                 root.setBackgroundColor(Color.rgb(newValue, newValue, newValue));
+
+                if (value <= 27578) {
+                    menu.setTextColor(Color.rgb(255, 255, 255));
+                }
+
+                if (value > 27578) {
+                    menu.setTextColor(Color.rgb(112, 112, 112));
+                }
             }
 
             @Override
@@ -46,14 +64,25 @@ public class SplashScreen extends AppCompatActivity {
             }
         };
 
-        new Handler().postDelayed(new Runnable(){
-            @Override
-            public void run(){
-                Intent splash = new Intent(getApplicationContext(), com.example.nba_api.Menu.class);
-                startActivity(splash);
-                finish();
-            }
-        },3500);
+    }
+
+
+    public void AbrirMapa(View view){
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void Player (View view){
+
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
+
+    public void Team (View view){
+
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
     }
 
     @Override
@@ -67,4 +96,5 @@ public class SplashScreen extends AppCompatActivity {
         super.onPause();
         sensorManager.unregisterListener(lightEventListener);
     }
+
 }

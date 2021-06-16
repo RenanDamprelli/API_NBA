@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">LoadAssincrono</string>
+    <string name="app_name">NBA Data</string>
     <string name="instructions">Digite o ID do jogador </string>
+    <string name="instructions2">Digite o ID do time </string>
 
     <string name="button_text">Pesquisar</string>
     <string name="button_save">Salvar</string>
@@ -17,4 +18,21 @@
 
     <string name="no_network">Sem conexão:(</string>
     <string name="str_empty">" "</string>
+
+    <string name="activity_text">Edit text com Botão limpar</string>
+
+
+    <string name="widget_id_label">Widget ID</string>
+
+
+    <string name="widget_update_label">Ultima Atualização</string>
+
+
+    <string name="widget_button_update">Atualizar</string>
+
+
+    <string name="date_count_format">%1$d @%2$s</string>
+
+    <string name="result"> Ver valores</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
