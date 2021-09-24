@@ -18,15 +18,17 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
 
+import com.example.nba_api.models.Player;
+
 import org.json.JSONException;
 import org.json.JSONObject;
+
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String> {
 
     private SensorManager sensorManager;
@@ -122,7 +124,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     }
 
     public void salvarDados(View view){
-        com.example.nba_api.Player a = new com.example.nba_api.Player();
+        Player a = new Player();
         a.setNmId(nmId.getText().toString());
         a.setNmPlayer(nmPlayer.getText().toString());
         a.setPosPlayer(posPlayer.getText().toString());

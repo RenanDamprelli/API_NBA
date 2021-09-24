@@ -12,13 +12,15 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.nba_api.models.Player;
+
 import java.util.List;
 
 public class ListarPlayerActivity extends AppCompatActivity {
 
     private ListView listView;
     private com.example.nba_api.playerDAO dao;
-    private List<com.example.nba_api.Player> players;
+    private List<Player> players;
 
     
     private SensorManager sensorManager;

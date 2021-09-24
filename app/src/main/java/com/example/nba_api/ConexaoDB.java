@@ -15,8 +15,15 @@ public class ConexaoDB extends SQLiteOpenHelper {
 
     @Override
     public void onCreate (SQLiteDatabase db) {
-        db.execSQL("create table player(id varchar(50) primary key not null unique, " +
-                "nome varchar(50), posicao varchar(50), altura varchar(50), peso varchar(50))");
+        String sqlCommand_player = "create table player(id int primary key not null unique,nome varchar(50), posicao varchar(50), altura varchar(50), peso varchar(50))";
+        String sqlCommand_team = "create table team(id_team int primary key not null unique,nome_team varchar(50), abreviacao_team varchar(50), cidade_team varchar(50), conferencia_team varchar(50))";
+        String sqlCommand_arena = "create table arena(id_arena int primary key not null unique,nome_arena varchar(50), cidade_arena varchar(50), estado_arena varchar(50), capacicade_arena varchar(50), id_team int, foreign key(id_team) references team(id_team))";
+
+
+        db.execSQL(sqlCommand_player);
+        db.execSQL(sqlCommand_team);
+        db.execSQL(sqlCommand_arena);
+
     }
 
     @Override

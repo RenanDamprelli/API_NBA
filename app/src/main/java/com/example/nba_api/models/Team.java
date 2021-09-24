@@ -1,4 +1,4 @@
-package com.example.nba_api;
+package com.example.nba_api.models;
 
 import java.io.Serializable;
 

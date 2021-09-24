@@ -74,7 +74,7 @@
         android:background="@drawable/button_search2"
         android:backgroundTint="#ffff"
         android:drawableLeft="@drawable/ic_search"
-        android:onClick="buscarPlayer"
+        android:onClick="buscarTime"
         app:backgroundTint="#2C8730"
         app:iconSize="30dp"
         app:iconTint="#FFFFFF"
@@ -83,7 +83,7 @@
 
     <TextView
 
-        android:id="@+id/txtname"
+        android:id="@+id/txtabrev"
 
         android:layout_width="252dp"
 
@@ -100,7 +100,7 @@
 
     <TextView
 
-        android:id="@+id/txtheight"
+        android:id="@+id/txtcidade"
 
         android:layout_width="252dp"
 
@@ -111,11 +111,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.553"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtposi" />
+        app:layout_constraintTop_toBottomOf="@+id/txtfullname" />
 
     <TextView
 
-        android:id="@+id/txtweight"
+        android:id="@+id/txtconf"
 
         android:layout_width="252dp"
 
@@ -126,11 +126,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.553"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtheight" />
+        app:layout_constraintTop_toBottomOf="@+id/txtcidade" />
 
     <TextView
 
-        android:id="@+id/txtposi"
+        android:id="@+id/txtfullname"
 
         android:layout_width="252dp"
 
@@ -143,7 +143,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.556"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtname" />
+        app:layout_constraintTop_toBottomOf="@+id/txtabrev" />
 
     <ImageView
         android:id="@+id/imageView"

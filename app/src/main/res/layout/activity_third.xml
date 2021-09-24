@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SecondActivity">
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="56dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="177dp"
+            android:layout_marginLeft="177dp"
+            android:layout_marginTop="83dp"
+            android:layout_marginEnd="178dp"
+            android:layout_marginRight="178dp"
+            android:layout_marginBottom="240dp"
+            android:indeterminateDrawable="@drawable/progress2"
+            android:indeterminateDuration="@android:integer/config_longAnimTime"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+
+            android:id="@+id/instructions"
+
+            android:layout_width="344dp"
+
+            android:layout_height="30dp"
+
+            android:layout_marginTop="180dp"
+
+            android:text="@string/instructions3"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/purple_500"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edid"
+            android:layout_width="308dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginLeft="33dp"
+            android:background="@drawable/edit"
+            android:ems="10"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:shadowColor="#C3C3C3"
+            android:text=""
+            android:textColor="@color/purple_500"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instructions" />
+
+        <Button
+
+            android:id="@+id/btnBusca"
+
+            android:layout_width="65dp"
+
+            android:layout_height="48dp"
+
+            android:layout_marginEnd="64dp"
+            android:layout_marginRight="64dp"
+            android:background="@drawable/button_search2"
+            android:backgroundTint="#ffff"
+            android:drawableLeft="@drawable/ic_search"
+            android:onClick="buscarArena"
+            app:backgroundTint="#2C8730"
+            app:iconSize="30dp"
+            app:iconTint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instructions" />
+
+        <TextView
+
+            android:id="@+id/txtnome"
+
+            android:layout_width="252dp"
+
+            android:layout_height="39dp"
+
+            android:layout_marginTop="60dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/purple_500"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.553"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnBusca" />
+
+        <TextView
+
+            android:id="@+id/txtestado"
+
+            android:layout_width="252dp"
+
+            android:layout_height="39dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/purple_500"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.553"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtcidade" />
+
+        <TextView
+
+            android:id="@+id/txtcapacidade"
+
+            android:layout_width="252dp"
+
+            android:layout_height="39dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/purple_500"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.553"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtestado" />
+
+        <TextView
+
+            android:id="@+id/txtcidade"
+
+            android:layout_width="252dp"
+
+            android:layout_height="39dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/purple_500"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.556"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtnome" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="212dp"
+            android:layout_height="114dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="140dp"
+            android:layout_marginRight="140dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/instructions"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.56"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.538"
+            app:srcCompat="@drawable/logo" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

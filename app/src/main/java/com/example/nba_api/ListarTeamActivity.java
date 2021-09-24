@@ -1,19 +1,28 @@
 package com.example.nba_api;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SplashScreen extends AppCompatActivity {
+import com.example.nba_api.models.Team;
 
+import java.util.List;
+
+public class ListarTeamActivity extends AppCompatActivity {
+
+    private ListView listView;
+    private teamDAO dao;
+    private List<Team> team;
+
+    
     private SensorManager sensorManager;
     private Sensor lightSensor;
     private SensorEventListener lightEventListener;
@@ -23,10 +32,21 @@ public class SplashScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
+        setContentView(R.layout.activity_listar_team);
         root = findViewById(R.id.root);
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
+
+
+
+
+        listView = findViewById(R.id.listar_teams);
+
+        dao = new teamDAO(this);
+        team = dao.obterTodos();
+        ArrayAdapter<Team> adaptador = new ArrayAdapter<Team>(this, R.layout.row, team);
+        listView.setAdapter(adaptador);
+
 
         // max value for light sensor
         maxValue = lightSensor.getMaximumRange();
@@ -46,15 +66,8 @@ public class SplashScreen extends AppCompatActivity {
             }
         };
 
-        new Handler().postDelayed(new Runnable(){
-            @Override
-            public void run(){
-                Intent splash = new Intent(getApplicationContext(), com.example.nba_api.Login.class);
-                startActivity(splash);
-                finish();
-            }
-        },3500);
     }
+
 
     @Override
     protected void onResume() {

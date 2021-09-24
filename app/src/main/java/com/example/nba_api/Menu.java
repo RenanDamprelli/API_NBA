@@ -79,9 +79,20 @@ public class Menu extends AppCompatActivity {
             startActivity(intent);
         }
 
+    public void Cad (View view){
+
+        Intent intent = new Intent(this, Cadastro.class);
+        startActivity(intent);
+    }
     public void Team (View view){
 
         Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
+    }
+
+    public void Arena (View view){
+
+        Intent intent = new Intent(this, ThirdActivity.class);
         startActivity(intent);
     }
 

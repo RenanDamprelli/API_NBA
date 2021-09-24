@@ -2,6 +2,7 @@
     <string name="app_name">NBA Data</string>
     <string name="instructions">Digite o ID do jogador </string>
     <string name="instructions2">Digite o ID do time </string>
+    <string name="instructions3">Digite o ID da arena </string>
 
     <string name="button_text">Pesquisar</string>
     <string name="button_save">Salvar</string>
